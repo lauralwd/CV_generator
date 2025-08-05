@@ -20,41 +20,39 @@
 %—————————————————————————————————––
 \noindent\makebox[\textwidth][s]{%
 \begin{minipage}[t]{0.3\textwidth}
-% Profile photo
 \begin{center}
 \begin{tikzpicture}
-\clip (0,0) circle (2cm) node {\includegraphics[width=4cm]{\ProfilePhoto}};
+  \clip (0,0) circle (2cm) node {\includegraphics[width=4cm]{\ProfilePhoto}};
 \end{tikzpicture}
 
 \MySkip
 
-% Name
 {\LARGE \bfseries \FullName}
 
 \MySkip
 
-% Personal details
 Born on \BirthDate\\
 \BirthPlace\\
-\Residence\\
+Currently living in \Residence\\
 
 \MySkip
 
-% Contact
 \textcolor{ColorTwo}{\faEnvelopeO} \myhref{mailto:\EmailAddress}{\EmailAddress}\\
 \textcolor{ColorTwo}{\faChain} \myhref{\WebPage}{\WebPage}
-
 \end{center}
 
 \vfill
 
-% Scientific interests
-\section*{Scientific interests}
+% About me
+\section*{About me}
 \raggedright
-\textcolor{ColorOne}{$\circ$} Something interesting\
-\textcolor{ColorOne}{$\circ$} Another interesting thing\
-\textcolor{ColorOne}{$\circ$} The most interesting thing\
-\textcolor{ColorOne}{$\circ$} Something less interesting
+Friends describe me as a versatile young academic and teacher, often contributing to
+committees and panels throughout the Utrecht University organisation. My research interests
+lie in plant physiology, symbioses, evolutionary- and meta-genomics, and ecology. I specialise in
+using my computational skills to answer appealing biological questions in those specific areas.
+Outside of the university, you may find me rock climbing, tinkering with electronics, or
+photographing the beautiful city of Utrecht. A more elaborate portfolio of my professional and
+hobby activities can be found on my (slightly outdated) personal website.
 
 \vfill
 
@@ -62,18 +60,11 @@ Born on \BirthDate\\
 \section*{Education}
 \begin{description}
 \raggedright
-\item[\normalfont \textcolor{ColorOne}{2021.}] \textbf{PhD in Social Sciences}\
-Another University\
-City – COUNTRY
+\item[\normalfont \textcolor{ColorOne}{2017 -- 2022.}] \textbf{PhD: The Azolla metagenome} \\
+Utrecht University – Plant Physiology Group
 
-\item[\normalfont \textcolor{ColorOne}{2015.}] \textbf{Masters in Physics}\\
-  University\\
-  City -- COUNTRY
-
-\item[\normalfont \textcolor{ColorOne}{2013.}] \textbf{Bachelor in arts}\\
-  Arts school\\
-  City -- COUNTRY
-
+\item[\normalfont \textcolor{ColorOne}{2010 -- 2015.}] \textbf{MSc / BSc (assumed from CV)}\\
+Please update if applicable
 \end{description}
 
 \vfill
@@ -84,50 +75,64 @@ City – COUNTRY
 \end{minipage}%
 \hfill%
 \begin{minipage}[t]{0.6\textwidth}
-\section*{Current situation}
+% Employment
+\section*{Employment}
 \begin{description}
 \raggedright
-\item[\normalfont \textcolor{ColorOne}{Jan. 2018 – Apr. 2021.}] \textbf{Your current job}\
-A Nice Research Lab\
-Here is a short description of your current project.
+\item[\normalfont \textcolor{ColorOne}{2022 -- now.}] \textbf{Lecturer bioinformatics for PhD candidates} \\
+Utrecht University – Theoretical Biology and Bioinformatics Group
+
+\item[\normalfont \textcolor{ColorOne}{2017 -- 2022.}] \textbf{PhD researcher} \\
+Utrecht University – Plant Physiology Group
 \end{description}
-
-% Experience
-\section*{Experience}
-\begin{description}
-\raggedright
-\item[\normalfont \textcolor{ColorOne}{Sep. 2017 – Aug. 2018.}] \textbf{Your previous job}\
-Your previous employer\
-Here you describe what you did before working where you are working now.
-
-\item[\normalfont \textcolor{ColorOne}{Sep. 2012 -- Aug. 2017.}] \textbf{Your first job}\\
-  Your employer\\
-  This could be a nice short description of your first job.
-
-\end{description}
+My PhD research focused on advancing Azolla from a non-model to a semi-model organism through the use of genome, metagenome, transcriptome, and phylogenomic approaches. This work involved close collaboration with experimental plant biologists and microbiologists and contributed to new insights into plant-microbe co-evolution, gene regulation, and applied symbiosis.
 
 % Publications
 \section*{Publications}
-\begin{description}
-\raggedright
+\begin{itemize}
 \item \underline{Name, Y.}, Second Author, N., Third Author, N. et al. \textbf{(2019)} A great title {\it Journal}. doi:~\myhref{https://doi.org/xx.yyy/zzz.12345}{xx.yyy/zzz.12345}
-
 \item First Author, T., \underline{Name, Y.}, Third Author, N. et al. \textbf{(2015)} A long title for a great study{\it Journal}. doi:~\myhref{https://doi.org/xx.yyy/zzz.54321}{xx.yyy/zzz.54321}
+\end{itemize}
 
-\end{description}
-
-% Oral communications
-\section*{Oral communications}
+% Teaching
+\section*{Teaching}
 \begin{description}
 \raggedright
-\item \underline{Name, Y.}, Second Author, N., Third Author, N. et al. \textbf{(2019)} The title of a talk you did. {\it Conference}, November 16, 2006, City, Country.
+\item[\normalfont \textcolor{ColorOne}{2022 -- now.}] Lecturer and course developer for bioinformatics trainings tailored to PhD candidates and postdocs in Life Sciences. I teach programming, data analysis and visualization using R, Bash, and Python, with a strong emphasis on reproducibility and real-world data.
+\item[\normalfont \textcolor{ColorOne}{2020 -- 2021.}] Course coordinator for “Introduction to Bioinformatics” at the Master's level. Designed new modules and assignments, some of which are available on GitHub.
+\item[\normalfont \textcolor{ColorOne}{2018 -- 2021.}] Teacher in “Biology of the Bio-Based Economy” and “Introduction to Bioinformatics” for MSc students. Focused on hands-on computational work.
+\item[\normalfont \textcolor{ColorOne}{2017 -- 2022.}] Supervision of MSc and BSc thesis students in computational biology and plant physiology projects.
+\item[\normalfont \textcolor{ColorOne}{2017 -- 2020.}] Teaching assistant in courses such as Systems Biology, Plant Physiology, and Molecular Genetics.
+\item Qualified university lecturer (BKO). Specialised in educating early-career researchers and professionals.
 \end{description}
 
-% Another section
-\section*{Another section}
+% Management
+\section*{Leadership, Management \& Committees}
 \begin{description}
 \raggedright
-\item Something you want to include in your CV
+\item[\normalfont \textcolor{ColorOne}{2023 -- now.}] Member of the Department Advisory Committee for Biology, Utrecht University.
+\item[\normalfont \textcolor{ColorOne}{2021.}] External committee member for the TU Delft Research Assessment Committee for Chemical Engineering and Biotechnology departments.
+\item[\normalfont \textcolor{ColorOne}{2020 -- 2021.}] Member of the Faculty Open Science Implementation Team and the Utrecht University Open Science Platform.
+\item[\normalfont \textcolor{ColorOne}{2019 -- 2021.}] Chair of the PhD Council at the Graduate School of Life Sciences (GSLS). Represented PhD voices in the Board of Studies.
+\item[\normalfont \textcolor{ColorOne}{2019 -- 2021.}] Member of the curriculum committee for the Master's in Bioinformatics \& Biocomplexity.
+\item[\normalfont \textcolor{ColorOne}{2017 -- 2021.}] PhD council representative at the Institute of Environmental Biology and the GSLS.
+\item Active in organising educational events, feedback sessions, and curriculum improvements across multiple layers of the university.
+\end{description}
+
+% Open Science
+\section*{Open Science}
+\begin{description}
+\raggedright
+\item Promotion of open data and open source tools in research projects
+\item Development of reproducible workflows for metagenomic analyses
+\end{description}
+
+% Outreach
+\section*{Outreach}
+\begin{description}
+\raggedright
+\item Photography of Utrecht and surrounding nature for public engagement
+\item Participation in science communication events and activities
 \end{description}
 
 \MySkip
