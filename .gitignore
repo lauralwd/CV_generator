@@ -1,0 +1,29 @@
+# Ignore LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.lof
+*.lot
+*.nav
+*.snm
+
+# Ignore generated PDFs
+*.pdf
+
+# Ignore editor or OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Ignore LaTeX IDE files
+*.bak
+*.latexmkrc
+.texpadtmp
+.vscode/

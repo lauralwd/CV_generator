@@ -1,0 +1,159 @@
+% cv.tex
+%—————————————————————————————————––
+% Simple asymmetric two-column CV using vars.tex for overrides
+%—————————————————————————————————––
+\documentclass[a4paper,10pt]{article}
+\usepackage[vmargin=1.5cm, hmargin=1.5cm]{geometry}
+
+% Load general setup (fonts, spacing, tikz, adjustbox, etc.)
+\input{MySetup}
+% Load branch-specific variables
+\input{vars.tex}
+
+
+%—————————————————————————————————––
+\begin{document}
+\thispagestyle{empty}
+
+%—————————————————————————————————––
+% Columns wrapped in makebox for top alignment
+%—————————————————————————————————––
+\noindent\makebox[\textwidth][s]{%
+\begin{minipage}[t]{0.3\textwidth}
+% Profile photo
+\begin{center}
+\begin{tikzpicture}
+\clip (0,0) circle (2cm) node {\includegraphics[width=4cm]{\ProfilePhoto}};
+\end{tikzpicture}
+
+\MySkip
+
+% Name
+{\LARGE \bfseries \FullName}
+
+\MySkip
+
+% Personal details
+Born on \BirthDate\\
+\BirthPlace\\
+\Residence\\
+
+\MySkip
+
+% Contact
+\textcolor{ColorTwo}{\faEnvelopeO} \myhref{mailto:\EmailAddress}{\EmailAddress}\\
+\textcolor{ColorTwo}{\faChain} \myhref{\WebPage}{\WebPage}
+
+\end{center}
+
+\vfill
+
+% Scientific interests
+\section*{Scientific interests}
+\raggedright
+\textcolor{ColorOne}{$\circ$} Something interesting\
+\textcolor{ColorOne}{$\circ$} Another interesting thing\
+\textcolor{ColorOne}{$\circ$} The most interesting thing\
+\textcolor{ColorOne}{$\circ$} Something less interesting
+
+\vfill
+
+% Education
+\section*{Education}
+\begin{description}
+\raggedright
+\item[\normalfont \textcolor{ColorOne}{2021.}] \textbf{PhD in Social Sciences}\
+Another University\
+City – COUNTRY
+
+\item[\normalfont \textcolor{ColorOne}{2015.}] \textbf{Masters in Physics}\\
+  University\\
+  City -- COUNTRY
+
+\item[\normalfont \textcolor{ColorOne}{2013.}] \textbf{Bachelor in arts}\\
+  Arts school\\
+  City -- COUNTRY
+
+\end{description}
+
+\vfill
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.05\textwidth}
+\MyVerticalRule
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.6\textwidth}
+\section*{Current situation}
+\begin{description}
+\raggedright
+\item[\normalfont \textcolor{ColorOne}{Jan. 2018 – Apr. 2021.}] \textbf{Your current job}\
+A Nice Research Lab\
+Here is a short description of your current project.
+\end{description}
+
+% Experience
+\section*{Experience}
+\begin{description}
+\raggedright
+\item[\normalfont \textcolor{ColorOne}{Sep. 2017 – Aug. 2018.}] \textbf{Your previous job}\
+Your previous employer\
+Here you describe what you did before working where you are working now.
+
+\item[\normalfont \textcolor{ColorOne}{Sep. 2012 -- Aug. 2017.}] \textbf{Your first job}\\
+  Your employer\\
+  This could be a nice short description of your first job.
+
+\end{description}
+
+% Publications
+\section*{Publications}
+\begin{description}
+\raggedright
+\item \underline{Name, Y.}, Second Author, N., Third Author, N. et al. \textbf{(2019)} A great title {\it Journal}. doi:~\myhref{https://doi.org/xx.yyy/zzz.12345}{xx.yyy/zzz.12345}
+
+\item First Author, T., \underline{Name, Y.}, Third Author, N. et al. \textbf{(2015)} A long title for a great study{\it Journal}. doi:~\myhref{https://doi.org/xx.yyy/zzz.54321}{xx.yyy/zzz.54321}
+
+\end{description}
+
+% Oral communications
+\section*{Oral communications}
+\begin{description}
+\raggedright
+\item \underline{Name, Y.}, Second Author, N., Third Author, N. et al. \textbf{(2019)} The title of a talk you did. {\it Conference}, November 16, 2006, City, Country.
+\end{description}
+
+% Another section
+\section*{Another section}
+\begin{description}
+\raggedright
+\item Something you want to include in your CV
+\end{description}
+
+\MySkip
+
+% Skills & Languages
+\begin{multicols}{2}
+\section*{Numerical tools}
+\begin{tabular}{ll}
+R              & \SkillBull{$\bullet\bullet\bullet\,\circ$} \\
+Matlab         & \SkillBull{$\bullet\bullet\bullet\,\circ$} \\
+Mathematica    & \SkillBull{$\bullet\,\circ\,\circ\,\circ$} \\
+\end{tabular}
+
+\vfill\null \columnbreak
+
+\section*{Languages}
+\begin{tabular}{ll}
+  Spanish        & \SkillBull{$\bullet \bullet \bullet \, \circ$}\\
+  French         & \SkillBull{$\bullet \, \circ \, \circ \, \circ$}\\
+\end{tabular}
+
+\end{multicols}
+
+% Last update command from MySetup
+\LastUpdate
+
+\end{minipage}%
+}
+\end{document}

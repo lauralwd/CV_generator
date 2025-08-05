@@ -1,0 +1,37 @@
+% MySetup.tex
+% ———————––
+% General packages and macros for cv.tex
+
+% Graphics and layout
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{adjustbox}
+\usepackage{multicol}
+
+% Colors
+\usepackage{xcolor}
+
+% Hyperlinks
+\usepackage[hidelinks]{hyperref}
+\newcommand{\myhref}[2]{\href{#1}{#2}}
+
+% FontAwesome icons (ensure you have the font installed)
+\usepackage{fontawesome}
+
+% Spacing shortcuts
+\newcommand{\MySkip}{\vspace{0.5em}}
+
+% Vertical rule between columns
+\newcommand{\MyVerticalRule}{\color{gray}\rule{1pt}{\textheight}}
+
+% Skill bullet macro
+\newcommand{\SkillBull}[1]{\textcolor{gray}{#1}}
+
+% Date—last updated footer
+\usepackage{datetime}
+\newcommand{\LastUpdate}{
+\vspace{1em}
+{\footnotesize Last updated: \today}
+}
+
+% Any other global customizations (fonts, spacing) go here
