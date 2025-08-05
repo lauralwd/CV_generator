@@ -15,15 +15,13 @@
 \begin{document}
 \thispagestyle{empty}
 
-%—————————————————————————————————––
-% Columns wrapped in makebox for top alignment
-%—————————————————————————————————––
 \noindent\makebox[\textwidth][s]{%
-\begin{minipage}[t]{0.3\textwidth}
+\begin{adjustbox}{valign=t}
+\noindent\begin{minipage}[t]{0.3\textwidth}
 \begin{center}
-\begin{tikzpicture}
-  \clip (0,0) circle (2cm) node {\includegraphics[width=4cm]{\ProfilePhoto}};
-\end{tikzpicture}
+  \begin{tikzpicture}
+    \clip (0,0) circle (2cm) node {\includegraphics[width=3cm]{\ProfilePhoto}};
+  \end{tikzpicture}
 
 \MySkip
 
@@ -46,13 +44,10 @@ Currently living in \Residence\\
 % About me
 \section*{About me}
 \raggedright
-Friends describe me as a versatile young academic and teacher, often contributing to
-committees and panels throughout the Utrecht University organisation. My research interests
-lie in plant physiology, symbioses, evolutionary- and meta-genomics, and ecology. I specialise in
-using my computational skills to answer appealing biological questions in those specific areas.
-Outside of the university, you may find me rock climbing, tinkering with electronics, or
-photographing the beautiful city of Utrecht. A more elaborate portfolio of my professional and
-hobby activities can be found on my (slightly outdated) personal website.
+Friends describe me as a versatile young academic and teacher, often contributing to committees and panels throughout the Utrecht University organisation. 
+My research interests lie in plant physiology, symbioses, evolutionary- and meta-genomics, and ecology. 
+I specialise in using my computational skills to answer appealing biological questions in those specific areas.
+Outside of the university, you may find me rock climbing, tinkering with electronics, or photographing the beautiful city of Utrecht. A more elaborate portfolio of my professional and hobby activities can be found on my (slightly outdated) personal website.
 
 \vfill
 
@@ -61,18 +56,26 @@ hobby activities can be found on my (slightly outdated) personal website.
 \begin{description}
 \raggedright
 \item[\normalfont \textcolor{ColorOne}{2017 -- 2022.}] \textbf{PhD: The Azolla metagenome} \\
-Utrecht University – Plant Physiology Group
+Utrecht University – Molecular Plant Physiology
 
-\item[\normalfont \textcolor{ColorOne}{2010 -- 2015.}] \textbf{MSc / BSc (assumed from CV)}\\
-Please update if applicable
+\item[\normalfont \textcolor{ColorOne}{2010 -- 2017.}] \textbf{MSc / BSc}\\
 \end{description}
 
 \vfill
 \end{minipage}%
+\end{adjustbox}%
+\hfill%
+
+
+\begin{adjustbox}{valign=t}
 \hfill%
 \begin{minipage}[t]{0.05\textwidth}
 \MyVerticalRule
 \end{minipage}%
+\end{adjustbox}
+
+
+\begin{adjustbox}{valign=t}
 \hfill%
 \begin{minipage}[t]{0.6\textwidth}
 % Employment
@@ -86,6 +89,11 @@ Utrecht University – Theoretical Biology and Bioinformatics Group
 Utrecht University – Plant Physiology Group
 \end{description}
 My PhD research focused on advancing Azolla from a non-model to a semi-model organism through the use of genome, metagenome, transcriptome, and phylogenomic approaches. This work involved close collaboration with experimental plant biologists and microbiologists and contributed to new insights into plant-microbe co-evolution, gene regulation, and applied symbiosis.
+\end{minipage}%
+\end{adjustbox}%
+}
+
+\newpage
 
 % Publications
 \section*{Publications}
@@ -159,6 +167,4 @@ Mathematica    & \SkillBull{$\bullet\,\circ\,\circ\,\circ$} \\
 % Last update command from MySetup
 \LastUpdate
 
-\end{minipage}%
-}
 \end{document}
