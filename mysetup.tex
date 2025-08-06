@@ -50,3 +50,20 @@
 
 % better options for text justification in narrow spaces
 \usepackage{ragged2e}
+
+% Footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt} % remove header line
+\renewcommand{\footrulewidth}{0pt} % remove footer line (set to 0.4pt for a line)
+\fancyfoot[C]{
+  \noindent
+  This CV was made with LaTeX and GitHub Actions 
+  link.    
+  \hfill
+  \LastUpdate 
+}
+
+
+
