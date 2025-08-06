@@ -24,7 +24,7 @@
 \usepackage{setspace}
 
 % Vertical rule between columns
-\newcommand{\MyVerticalRule}{\color{gray}\rule{1pt}{\textheight}}
+\newcommand{\MyVerticalRule}{\color{ForestGreen}\rule{1pt}{\textheight}}
 
 % Skill bullet macro
 \newcommand{\SkillBull}[1]{\textcolor{gray}{#1}}
@@ -40,11 +40,11 @@
 \usepackage{tikz}
 \newcommand{\SkillBar}[2]{%
   \begin{tikzpicture}
-    \filldraw[fill=ColorOne!50, draw=ColorOne] (0,0) rectangle (#1*#2,0.3em);
+    \filldraw[fill=ForestGreen!50, draw=ForestGreen] (0,0) rectangle (#1*#2,0.3em);
     \draw (0,0) rectangle (#2,0.3em);
   \end{tikzpicture}%
 }
-\newcommand{\Tag}[1]{\fcolorbox{ColorOne}{ColorOne!10}{\small\texttt{#1}}}
+\newcommand{\Tag}[1]{\fcolorbox{ForestGreen}{ForestGreen!10}{\small\texttt{#1}}}
 
 % better options for text justification in narrow spaces
 \usepackage{ragged2e}
