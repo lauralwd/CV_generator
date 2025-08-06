@@ -15,9 +15,11 @@
 \begin{document}
 \pagestyle{empty}
 
+% setup column nr 1 —————————————————————————————————––
 \noindent\makebox[\textwidth][s]{%
 \begin{adjustbox}{valign=t}
 \noindent\begin{minipage}[t]{0.3\textwidth}
+
 \begin{center}
   \begin{tikzpicture}
     \clip (0,0) circle (2cm) node {\includegraphics[width=4cm]{\ProfilePhoto}};
@@ -64,6 +66,8 @@ Utrecht University – Molecular Plant Physiology
 \end{description}
 
 \vfill
+% Close column 1 put in vertical line as column2 —————————————————————————————————––
+
 \end{minipage}%
 \end{adjustbox}%
 \hfill%
@@ -75,11 +79,14 @@ Utrecht University – Molecular Plant Physiology
 \MyVerticalRule
 \end{minipage}%
 \end{adjustbox}
-
+% Close column 2 and setup column nr 3 —————————————————————————————————––
 
 \begin{adjustbox}{valign=t}
 \hfill%
 \begin{minipage}[t]{0.6\textwidth}
+
+% Contents column 3 —————————————————————————————————––
+
 % Employment
 \section*{Employment}
 \begin{description}
@@ -92,7 +99,7 @@ Utrecht University – Molecular Plant Physiology
 \end{minipage}%
 \end{adjustbox}%
 }
-
+% Contents page 2 —————————————————————————————————––
 \newpage
 
 % Publications
