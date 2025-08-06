@@ -32,14 +32,13 @@
 
 \MySkip
 
-\ifdefined\BirthDate Born on \BirthDate\\ \fi
-\ifdefined\BirthPlace \BirthPlace\\ \fi
-\ifdefined\Residence Currently living in \Residence\\ \fi
-
-
+\fontfamily{pag}\selectfont
+  \ifdefined\BirthDate Born on \BirthDate\\ \fi
+  \ifdefined\BirthPlace \BirthPlace\\ \fi
+  \ifdefined\Residence Currently living in \Residence\\ \fi
 
 \MySkip
-
+\fontfamily{pag}\selectfont
 \textcolor{ColorTwo}{\faEnvelope} \myhref{mailto:\EmailAddress}{\EmailAddress}\\
 \textcolor{ColorTwo}{\faGlobe} \myhref{\WebPage}{\WebPage}
 \end{center}
@@ -60,10 +59,11 @@
 \section*{Education}
 \begin{description}
 \raggedright
-\item[\normalfont \textcolor{ColorOne}{2022.}] Basic Teaching Qualification (BKO), Utrecht University
+\item[\normalfont \textcolor{ColorOne}{2022.}] Basic University Teaching Qualification (bUTQ), Utrecht University
 \item[\normalfont \textcolor{ColorOne}{2017 -- 2022.}] \textbf{PhD: The Azolla metagenome} \\
 Utrecht University – Molecular Plant Physiology
 \item[\normalfont \textcolor{ColorOne}{2010 -- 2017.}] \textbf{MSc / BSc}\\
+Environmental Plant Biology
 \end{description}
 
 \vfill
