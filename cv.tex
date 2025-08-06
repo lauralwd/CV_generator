@@ -38,9 +38,11 @@
 
 \MySkip
 
-Born on \BirthDate\\
-\BirthPlace\\
-Currently living in \Residence\\
+\ifdefined\BirthDate Born on \BirthDate\\ \fi
+\ifdefined\BirthPlace \BirthPlace\\ \fi
+\ifdefined\Residence Currently living in \Residence\\ \fi
+
+
 
 \MySkip
 
