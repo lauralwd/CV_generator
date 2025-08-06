@@ -9,6 +9,15 @@
 \input{MySetup}
 % Load branch-specific variables
 \input{vars.tex}
+% TikZ skill bar & colored tag definitions
+\usepackage{tikz}
+\newcommand{\SkillBar}[2]{%
+  \begin{tikzpicture}
+    \filldraw[fill=ColorOne!50, draw=ColorOne] (0,0) rectangle (#1*#2,0.3em);
+    \draw (0,0) rectangle (#2,0.3em);
+  \end{tikzpicture}%
+}
+\newcommand{\Tag}[1]{\fcolorbox{ColorOne}{ColorOne!10}{\small\texttt{#1}}}
 
 
 %—————————————————————————————————––
@@ -20,7 +29,7 @@
 \noindent\begin{minipage}[t]{0.3\textwidth}
 \begin{center}
   \begin{tikzpicture}
-    \clip (0,0) circle (2cm) node {\includegraphics[width=3cm]{\ProfilePhoto}};
+    \clip (0,0) circle (2cm) node {\includegraphics[width=4cm]{\ProfilePhoto}};
   \end{tikzpicture}
 
 \MySkip
