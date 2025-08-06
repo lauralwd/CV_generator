@@ -204,38 +204,39 @@
 \MySkip
 
 % Skills\& Languages
+\noindent
+\begin{minipage}[t]{0.6\textwidth}
+  \section*{Technical Proficiencies}
 \begin{multicols}{2}
-\section*{Technical Proficiencies}
 \begin{tabular}{ll}
-  R       & \SkillBull{$\bullet\bullet\bullet\bullet$} \\
-  Python  & \SkillBull{$\bullet\bullet\bullet\bullet$} \\
-  Bash    & \SkillBull{$\bullet\bullet\bullet\circ$} \\
+      R       & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+      Python  & \SkillBull{$\bullet\bullet\bullet\bullet\circ$} \\
+      Bash    & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+      HPC    & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+      Docker    & \SkillBull{$\bullet\bullet\bullet\circ\circ$} \\
+      Git    & \SkillBull{$\bullet\bullet\bullet\bullet\circ$} \\
 \end{tabular}
 
 \vfill\null \columnbreak
 
-\section*{Languages \& Fluency}
+    \begin{tabular}{ll}
+      Snakemake    & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+      SQL    & \SkillBull{$\bullet\bullet\circ\circ\circ$} \\
+      Machine learning    & \SkillBull{$\bullet\bullet\bullet\bullet\circ$} \\
+      Data Visualization    & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+      Notebooks/Dashboards    & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+    \end{tabular}
+  \end{multicols}
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[t]{.3\textwidth}
+\section*{Languages}
 \begin{tabular}{ll}
   English & Fluent \\
   Dutch   & Fluent \\
 \end{tabular}
-
-\end{multicols}
-
-% Skill Visualization
-\section*{Skill Visualization}
-\begin{description}
-  \item[\faServer\ HPC]          \SkillBar{0.80}{4cm}
-  \item[\faDocker\ Docker]        \SkillBar{1.00}{4cm}
-  \item[\faGithub\ Git]           \SkillBar{0.90}{4cm}
-  \item[\faPuzzlePiece\ Snakemake] \SkillBar{0.90}{4cm} \Tag{Snakemake}
-  \item[\faGithub\ GitHub Actions] \SkillBar{0.80}{4cm} \Tag{CI/CD}
-  \item[\faDatabase\ SQL]         \SkillBar{0.50}{4cm}
-  \item[\faBrain\ ML]             \SkillBar{0.60}{4cm}
-  \item[\faChartBar\ Data Vis]    \SkillBar{0.90}{4cm}
- % \item[\faTachometer\ Dashboards] \SkillBar{0.85}{4cm}
-  \item[\faBook\ Reporting]       \SkillBar{0.90}{4cm} \Tag{Notebooks}
-\end{description}
+\end{minipage}
 
 % Last update command from MySetup
 \LastUpdate
