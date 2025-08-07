@@ -2,8 +2,8 @@
 
 Derived from [Simple-CV](https://www.overleaf.com/latex/templates/simple-cv/dwhjbyjdkcch) By Sofia Jijon
 
-The main CV over-elaborate lives in the main branch.
-Specific CVs trimmed and finetuned for specific job applications live in their dedicated branches.
+The main over-elaborate CV lives in the main branch.
+Specific CVs trimmed and fine-tuned for specific job applications live in their dedicated branches.
 Use `git worktree` to have multiple branches live side by side on your filesystem.
 
 ## Prerequisites
