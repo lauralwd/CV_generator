@@ -57,6 +57,8 @@ jobs:
     name: Deploy to github pages
     needs: build-pdf
     runs-on: ubuntu-latest
+    environment:
+        name: github-pages
     steps:
     - name: Download pdf
       uses: actions/download-artifact@v4
