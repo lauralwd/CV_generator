@@ -2,6 +2,8 @@
 
 ![Build CV](https://github.com/<your-org>/cv_generator/actions/workflows/build-cv.yml/badge.svg)
 
+Derived from [Simple-CV](https://www.overleaf.com/latex/templates/simple-cv/dwhjbyjdkcch) By Sofia Jijon
+
 The main CV over-elaborate lives in the main branch.
 Specific CVs trimmed and finetuned for specific job applications live in their dedicated branches.
 Use `git worktree` to have multiple branches live side by side on your filesystem.
@@ -37,4 +39,4 @@ Use `git worktree` to have multiple branches live side by side on your filesyste
 
 - **`vars.tex`**: override personal details, colors, and image paths per branch.
 - **`MySetup.tex`**: configure global packages, macros, and styles.
-- **`cv.tex`**: adjust layout or sections; most content is driven by variables and includes.
+- **`cv.tex`**: adjust layout, sections and experience.
