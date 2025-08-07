@@ -78,15 +78,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set date variables
-          run: |
-            echo "RELEASE_DATE=$(date +'%Y-%m')" >> $GITHUB_ENV
+        run: |
+          echo "RELEASE_DATE=$(date +'%Y-%m')" >> $GITHUB_ENV
       - name: Download PDF artifact
         uses: actions/download-artifact@v4
         with:
           name: CV-pdf
           path: ./
-  #    - name: Rename PDF with date
-  #      run: mv cv.pdf CV_Laura_Dijkhuizen_$(date +'%Y_%m').pdf
+      - name: Rename PDF with date
+        run: mv cv.pdf CV_Laura_Dijkhuizen_"$(date +'%Y_%m')".pdf
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -103,6 +103,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: cv.pdf # ./CV_Laura_Dijkhuizen_$(date +'%Y_%m').pdf
+          asset_path: CV_Laura_Dijkhuizen_"$(date +'%Y_%m')".pdf
           asset_name: CV-pdf
           asset_content_type: application/pdf
