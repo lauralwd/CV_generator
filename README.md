@@ -25,8 +25,7 @@ Use `git worktree` to have multiple branches live side by side on your filesyste
    ```
 3. Build and view your CV locally:
    ```bash
-   make pdf    # compile cv.pdf
-   make view   # compile and open PDF
+   make all    # compile cv.pdf
    make clean  # remove auxiliary files
    ```
 4. Push changes to GitHub to trigger the Actions workflow, which will generate a release asset:

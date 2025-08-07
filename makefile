@@ -12,7 +12,7 @@ DEPENDENCIES := vars.tex MySetup.tex
 # Build with latexmk for automatic reruns
 LATEXMK := latexmk -interaction=nonstopmode -halt-on-error -pdf
 
-.PHONY: all pdf clean view
+.PHONY: all clean
 
 # Default target: build PDF
 all: $(PDF)
@@ -25,20 +25,3 @@ $(PDF): $(TEX) $(DEPENDENCIES)
 # Clean auxiliary files
 clean:
 	latexmk -C
-
-# Build then open the PDF
-view: all
-	@{ \
-	if command -v xdg-open >/dev/null; then \
-		xdg-open $(PDF); \
-	elif command -v open >/dev/null; then \
-		open $(PDF); \
-	fi
-	}
-	@{ \
-	if command -v xdg-open >/dev/null; then \
-		xdg-open $(OUT); \
-	elif command -v open >/dev/null; then \
-		open $(OUT); \
-	fi
-	}
