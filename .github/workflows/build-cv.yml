@@ -44,7 +44,7 @@ jobs:
 
   deploy_to_pages:
     name: Deploy to github pages
-    needs: build
+    needs: build-pdf
     runs-on: ubuntu-latest
 
     steps:
