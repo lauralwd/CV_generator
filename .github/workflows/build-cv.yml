@@ -31,17 +31,6 @@ jobs:
     - name: Verify Makefile
       run: |  
         test -f makefile || (echo "ERROR: makefile missing" && exit 1)
-  
-#    - name: Install TeX Live
-#      run: |
-#        sudo apt-get update
-#        sudo apt-get install -y     \
-#          texlive-latex-base        \
-#          texlive-latex-recommended \
-#          texlive-fonts-recommended \
-#          texlive-latex-extra       \
-#          texlive-pictures    \
-#          latexmk
 
     - name: Build CV with latexmk
       run: |
@@ -53,29 +42,19 @@ jobs:
         name: CV-pdf
         path: cv.pdf
 
-#    - name: Push CV to GitHub Pages
-#      uses: peaceiris/actions-gh-pages@v4
-#     with:
-#        github_token: ${{ secrets.GITHUB_TOKEN }}
-#        publish_branch: gh-pages
-#        publish_dir: .   # assume cv.pdf root
-#        force_orphan: true
-#        keep_files: false
-#        commit_message: "Publish CV for commit ${{ github.sha }}"
-
   deploy_to_pages:
     name: Deploy to github pages
     needs: build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download pdf
-        uses: actions/download-artifact@v4
-        with:
-          name: cv-pdf
+    - name: Download pdf
+      uses: actions/download-artifact@v4
+      with:
+        name: cv-pdf
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          working-directory: ./
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+      with:
+        working-directory: ./
