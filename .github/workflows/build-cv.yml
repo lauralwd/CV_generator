@@ -63,7 +63,7 @@ jobs:
       run: mv cv.pdf index.pdf
     - name: Create index.html
       run: |
-        echo '<html><body><a href="CV.pdf">Download your CV</a></body></html>' > output/index.html
+        echo '<html><body><a href="CV.pdf">Download your CV</a></body></html>' > index.html
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
