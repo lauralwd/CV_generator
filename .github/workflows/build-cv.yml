@@ -22,7 +22,7 @@ jobs:
           texlive-latex-recommended \
           texlive-fonts-recommended \
           texlive-latex-extra       \
-          texlive-latex-pictures    \
+          texlive-pictures    \
           latexmk
 
     - name: Build CV with latexmk
