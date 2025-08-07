@@ -17,19 +17,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Verify LaTeX preamble
         run: |  
           test -f mysetup.tex || (echo "ERROR: MySetup.tex missing" && exit 1)
-
       - name: Verify LaTeX vars
         run: |  
           test -f vars.tex || (echo "ERROR: vars.tex missing" && exit 1)
-
       - name: Verify LaTeX cv
         run: |  
           test -f cv.tex || (echo "ERROR: cv.tex missing" && exit 1)
-
       - name: Verify Makefile
         run: |  
           test -f makefile || (echo "ERROR: makefile missing" && exit 1)
@@ -42,11 +38,9 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-
     - name: Build CV with latexmk
       run: |
         make all
-
     - name: Upload PDF artifact
       uses: actions/upload-artifact@v4
       with:
@@ -67,7 +61,9 @@ jobs:
         path: ./
     - name: Rename PDF for Pages
       run: mv cv.pdf index.pdf
-
+    - name: Create index.html
+      run: |
+        echo '<html><body><a href="CV.pdf">Download your CV</a></body></html>' > output/index.html
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
