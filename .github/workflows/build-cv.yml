@@ -89,7 +89,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           title: Update CV
-          files: CV_Laura_Dijkhuizen_$(date +'%Y_%m').pdf
 
   release:
     name: Release CV PDF
