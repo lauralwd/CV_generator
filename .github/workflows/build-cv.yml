@@ -93,8 +93,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: release_name: "CV ${{ env.RELEASE_DATE }}"
-          release_name: release_name: "CV ${{ env.RELEASE_DATE }}"
+          release_name: "CV ${{ env.RELEASE_DATE }}"
           draft: false
           prerelease: false
       - name: Upload PDF to Release
