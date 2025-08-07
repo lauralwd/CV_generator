@@ -7,7 +7,7 @@ TEX := cv.tex
 PDF := cv.pdf
 
 # Dependencies: vars.tex, main setup
-DEPENDENCIES := vars.tex MySetup.tex
+DEPENDENCIES := vars.tex mysetup.tex
 
 # Build with latexmk for automatic reruns
 LATEXMK := latexmk -interaction=nonstopmode -halt-on-error -pdf
