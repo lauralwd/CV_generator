@@ -1,0 +1,30 @@
+name: Build CV PDF
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install TeX Live
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-science latexmk
+
+    - name: Build CV with latexmk
+      run: |
+        make all
+
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: CV-pdf
+        path: cv.pdf
