@@ -81,14 +81,15 @@ jobs:
         with:
           name: CV-pdf
           path: ./  
-      - name: Rename PDF with date
-        run: mv cv.pdf CV_Laura_Dijkhuizen_$(date +'%Y_%m').pdf
+      #- name: Rename PDF with date
+      #  run: mv cv.pdf CV_Laura_Dijkhuizen_$(date +'%Y_%m').pdf
       - name: Create a Release
         uses: elgohr/Github-Release-Action@v5
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           title: Update CV
+          workdir: ./
 
   release:
     name: Release CV PDF
@@ -100,8 +101,8 @@ jobs:
         with:
           name: CV-pdf
           path: ./
-      - name: Rename PDF with date
-        run: mv cv.pdf CV_Laura_Dijkhuizen_$(date +'%Y_%m').pdf
+  #    - name: Rename PDF with date
+  #      run: mv cv.pdf CV_Laura_Dijkhuizen_$(date +'%Y_%m').pdf
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -119,5 +120,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./CV_Laura_Dijkhuizen_$(date +'%Y_%m').pdf
-          asset_name: CV_Laura_Dijkhuizen_${{ github.run_number }}.pdf
+          asset_name: CV-pdf
           asset_content_type: application/pdf
