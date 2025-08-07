@@ -51,7 +51,8 @@ jobs:
     - name: Download pdf
       uses: actions/download-artifact@v4
       with:
-        name: cv-pdf
+        name: CV-pdf
+        path: ./
 
     - name: Deploy to GitHub Pages
       id: deployment
