@@ -52,3 +52,13 @@ jobs:
       with:
         name: CV-pdf
         path: cv.pdf
+
+    - name: Push CV to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: .   # assume cv.pdf root
+        force_orphan: true
+        keep_files: false
+        commit_message: "Publish CV for commit ${{ github.sha }}"
