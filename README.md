@@ -2,7 +2,7 @@
 
 [![Build CV PDF](https://github.com/lauralwd/CV_generator/actions/workflows/build-cv.yml/badge.svg?branch=main)](https://github.com/lauralwd/CV_generator/actions/workflows/build-cv.yml)
 
-Download my latest CV in the Releases section ➡️
+Download my latest CV in the Releases section or via [this link](https://lauralwd.github.io/CV_generator/)
 
 Derived from [Simple-CV](https://www.overleaf.com/latex/templates/simple-cv/dwhjbyjdkcch) By Sofia Jijon
 
