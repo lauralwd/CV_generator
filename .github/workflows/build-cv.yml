@@ -3,6 +3,7 @@ name: Build CV PDF
 permissions:
   id-token: write
   contents: read
+  actions: write
   pages: write
 
 on:
