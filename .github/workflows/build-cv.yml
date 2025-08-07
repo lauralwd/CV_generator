@@ -65,7 +65,7 @@ jobs:
         run: mv ./public/cv.pdf ./public/CV_Laura_Dijkhuizen_${{ env.RELEASE_DATE }}.pdf
       - name: Create index.html
         run: |
-          echo '<html><body><a href="cv.pdf" style="font-size:2em;font-weight:bold;">Download CV</a></body></html>' > ./public/index.html
+          echo '<html><head><meta http-equiv="refresh" content="0; url=CV_Laura_Dijkhuizen_${{ env.RELEASE_DATE }}.pdf"></head><body>If download does not start, <a href="CV_Laura_Dijkhuizen_${{ env.RELEASE_DATE }}.pdf">click here</a>.</body></html>' > ./public/index.html
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
