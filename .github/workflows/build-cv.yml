@@ -87,7 +87,7 @@ jobs:
       - name: Set release date
         run: echo "RELEASE_DATE=$(date +'%Y_%m')" >> $GITHUB_ENV
       - name: Rename PDF with date
-        run: mv cv.pdf CV_Laura_Dijkhuizen_${{ env.RELEASE_DATE }}
+        run: mv cv.pdf CV_Laura_Dijkhuizen_${{ env.RELEASE_DATE }}.pdf
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
