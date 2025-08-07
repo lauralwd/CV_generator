@@ -59,6 +59,10 @@ jobs:
         with:
           name: CV-pdf
           path: ./public
+      - name: Set release date
+        run: echo "RELEASE_DATE=$(date +'%Y_%m')" >> $GITHUB_ENV
+      - name: Rename PDF with date
+        run: mv ./public/cv.pdf ./public/CV_Laura_Dijkhuizen_${{ env.RELEASE_DATE }}.pdf
       - name: Create index.html
         run: |
           echo '<html><body><a href="cv.pdf" style="font-size:2em;font-weight:bold;">Download CV</a></body></html>' > ./public/index.html
