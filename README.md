@@ -1,7 +1,5 @@
 # CV generator
 
-![Build CV](https://github.com/<your-org>/cv_generator/actions/workflows/build-cv.yml/badge.svg)
-
 Derived from [Simple-CV](https://www.overleaf.com/latex/templates/simple-cv/dwhjbyjdkcch) By Sofia Jijon
 
 The main CV over-elaborate lives in the main branch.
