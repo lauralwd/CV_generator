@@ -18,7 +18,7 @@ jobs:
 
     - name: Verify LaTeX preamble
       run: |  
-        test -f MySetup.tex || (echo "ERROR: MySetup.tex missing" && exit 1)
+        test -f mysetup.tex || (echo "ERROR: MySetup.tex missing" && exit 1)
 
     - name: Verify LaTeX vars
       run: |  
