@@ -49,30 +49,49 @@ jobs:
         name: CV-pdf
         path: cv.pdf
 
-  deploy_to_pages:
-    name: Deploy to github pages
+  deploy_to_pages2:
+    name: Deploy to GitHub Pages (peaceiris)
     needs: build-pdf
     runs-on: ubuntu-latest
-    environment:
-        name: github-pages
     steps:
-    - name: Download pdf
-      uses: actions/download-artifact@v4
-      with:
-        name: CV-pdf
-        path: ./
-#    - name: Rename PDF for Pages
-#      run: mv cv.pdf index.pdf
-    - name: Create index.html
-      run: |
-        echo '<html><body><a href="CV.pdf">Download your CV</a></body></html>' > index.html
-    - name: Deploy to GitHub Pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      id: deployment
-      uses: actions/deploy-pages@v4
-      with:
-          artifact_name: CV-pdf
+      - name: Download PDF artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: CV-pdf
+          path: ./public
+      - name: Create index.html
+        run: |
+          echo '<html><body><a href="cv.pdf">Download your CV</a></body></html>' > ./public/index.html
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+
+#   deploy_to_pages:
+#     name: Deploy to github pages
+#     needs: build-pdf
+#     runs-on: ubuntu-latest
+#     environment:
+#         name: github-pages
+#     steps:
+#     - name: Download pdf
+#       uses: actions/download-artifact@v4
+#       with:
+#         name: CV-pdf
+#         path: ./
+# #    - name: Rename PDF for Pages
+# #      run: mv cv.pdf index.pdf
+#     - name: Create index.html
+#       run: |
+#         echo '<html><body><a href="CV.pdf">Download your CV</a></body></html>' > index.html
+#     - name: Deploy to GitHub Pages
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       id: deployment
+#       uses: actions/deploy-pages@v4
+#       with:
+#           artifact_name: CV-pdf
 
   release:
     name: Release CV PDF
