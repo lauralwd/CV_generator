@@ -84,8 +84,10 @@ jobs:
         with:
           name: CV-pdf
           path: ./
+      - name: Set release date
+        run: echo "RELEASE_DATE=$(date +'%Y_%m')" >> $GITHUB_ENV
       - name: Rename PDF with date
-        run: mv cv.pdf CV_Laura_Dijkhuizen_"$(date +'%Y_%m')".pdf
+        run: mv cv.pdf CV_Laura_Dijkhuizen_${{ env.RELEASE_DATE }}
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -102,6 +104,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: CV_Laura_Dijkhuizen_"$(date +'%Y_%m')".pdf
-          asset_name: CV-pdf
+          asset_path: CV_Laura_Dijkhuizen_${{ env.RELEASE_DATE }}.pdf
+          asset_name: CV_Laura_Dijkhuizen_${{ env.RELEASE_DATE }}.pdf
           asset_content_type: application/pdf
