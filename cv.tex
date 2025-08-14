@@ -11,6 +11,9 @@
 % Load branch-specific variables
 \input{vars.tex}
 
+% Define a custom gray color in your preamble (or near the top of your document)
+\definecolor{BracketGray}{HTML}{888888}
+
 %—————————————————————————————————––
 \begin{document}
 \pagestyle{fancy}
@@ -231,12 +234,12 @@ contributing to governance, policy development, reproducibility initiatives, and
 \begin{minipage}[t]{0.6\textwidth}
     \GreenHeading{Technical \& Data Governance Proficiencies}
     \begin{tabular}{p{1em}p{11em}p{14.5em}r}
-      \textcolor{ForestGreen}{\faServer}   & HPC \& Workflow Design  & (Conda, Snakemake)                   & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
-      \textcolor{ForestGreen}{\faDocker}   & Docker / GitHub         & (Actions, CI/CD)                     & \SkillBull{$\bullet\bullet\bullet\bullet\circ$} \\
-      \textcolor{ForestGreen}{\faChartBar} & Data Dashboards         & (ggplot2, Shiny, Plotly)              & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
-      \textcolor{ForestGreen}{\faBook}     & Reproducible Notebooks  & (Jupyter, Quarto)                     & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
-      \textcolor{ForestGreen}{\faRProject} & R / Python / Bash       & (advanced scripting, Sysadmin)       & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
-      \textcolor{ForestGreen}{\faDatabase} & SQL / Data Governance   & (PostgreSQL, FAIR)                    & \SkillBull{$\bullet\bullet\bullet\circ\circ$} \\
+      \textcolor{ForestGreen}{\faServer}   & HPC \& Workflow Design  & \textcolor{BracketGray}{(Conda, Snakemake)}                   & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+      \textcolor{ForestGreen}{\faDocker}   & Docker / GitHub         & \textcolor{BracketGray}{(Actions, CI/CD)}                     & \SkillBull{$\bullet\bullet\bullet\bullet\circ$} \\
+      \textcolor{ForestGreen}{\faChartBar} & Data Dashboards         & \textcolor{BracketGray}{(ggplot2, Shiny, Plotly)}              & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+      \textcolor{ForestGreen}{\faBook}     & Reproducible Notebooks  & \textcolor{BracketGray}{(Jupyter, Quarto)}                     & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+      \textcolor{ForestGreen}{\faRProject} & R / Python / Bash       & \textcolor{BracketGray}{(advanced scripting, Sysadmin)}       & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+      \textcolor{ForestGreen}{\faDatabase} & SQL / Data Governance   & \textcolor{BracketGray}{(PostgreSQL, FAIR)}                    & \SkillBull{$\bullet\bullet\bullet\circ\circ$} \\
     \end{tabular}
 \end{minipage}
 \hfill
