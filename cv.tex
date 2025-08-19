@@ -11,6 +11,9 @@
 % Load branch-specific variables
 \input{vars.tex}
 
+\definecolor{BracketGray}{HTML}{888888}
+
+
 %—————————————————————————————————––
 \begin{document}
 \pagestyle{fancy}
@@ -33,13 +36,11 @@
 
 \MySkip
 
-\fontfamily{pag}\selectfont
   \ifdefined\BirthDate Born on \BirthDate\\ \fi
   \ifdefined\BirthPlace \BirthPlace\\ \fi
   \ifdefined\Residence Currently living in \Residence\\ \fi
 
 \MySkip
-\fontfamily{pag}\selectfont
 \textcolor{ForestGreen}{\faEnvelope} \href{mailto:\EmailAddress}{\EmailAddress}\\
 \textcolor{ForestGreen}{\faGlobe} \href{\WebPage}{\WebPage}
 \end{center}
@@ -54,7 +55,7 @@
 }
 
 % Professional Attributes
-{\fontfamily{pag}\selectfont\RaggedRight
+{\RaggedRight
 
 \GreenHeading{Professional Attributes}
 \begin{spacing}{1}
@@ -172,7 +173,8 @@
     (\href{https://lauralwd.github.io/blog/post-mpp-server/}{link}) 
     enabling experimentalist colleagues to use my infrastructure with ease.
   \item Worked with a wide variety of data. 
-    From PacBio long reads to microRNA-seq and from optical mapping to handwritten notes.
+    From PacBio long reads to microRNA-seq and from optical mapping to handwritten notes.\\
+  %   Focus on microbial community data; exposure to soil/sediment measurements.
 %\end{itemize}
 \end{description}
 
@@ -261,7 +263,7 @@
     \item \textbf{The crane fly glycosylated triketide $\delta$-lactone cornicinine elicits akinete differentiation of the cyanobiont in aquatic \textit{Azolla} fern symbioses}  
       Plant, Cell \& Environment (2024). \href{https://doi.org/10.1111/pce.14907}{DOI}
     \item \textbf{Control of the \textit{Azolla} symbiosis sexual reproduction: ferns to shed light on the origin of floral regulation?}  
-      Preprint (2020). \href{https://doi.org/10.3389/fpls.2021.693039}{DOI}
+      (2020). \href{https://doi.org/10.3389/fpls.2021.693039}{DOI}
   \end{itemize}
 
 
@@ -283,28 +285,15 @@
 % Skills\& Languages
 \noindent
 \begin{minipage}[t]{0.6\textwidth}
-  \GreenHeading{Technical Proficiencies}
-  \begin{multicols}{2}
-    \begin{tabular}{p{1em}p{4em}r}
-      \textcolor{ForestGreen}{\faRProject}   & R        & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
-      \textcolor{ForestGreen}{\faPython}     & Python   & \SkillBull{$\bullet\bullet\bullet\bullet\circ$} \\
-      \textcolor{ForestGreen}{\faTerminal}   & Bash     & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
-      \textcolor{ForestGreen}{\faServer}     & HPC      & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
-      \textcolor{ForestGreen}{\faDocker}     & Docker   & \SkillBull{$\bullet\bullet\bullet\circ\circ$} \\
-      \textcolor{ForestGreen}{\faGithub}     & Git      & \SkillBull{$\bullet\bullet\bullet\bullet\circ$} \\
+    \GreenHeading{Technical \& Data Governance Proficiencies}
+    \begin{tabular}{p{1em}p{11em}p{14.5em}r}
+      \textcolor{ForestGreen}{\faServer}   & HPC \& Workflow Design  & \textcolor{BracketGray}{(Conda, Snakemake)}                   & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+      \textcolor{ForestGreen}{\faDocker}   & Docker / GitHub         & \textcolor{BracketGray}{(Actions, CI/CD)}                     & \SkillBull{$\bullet\bullet\bullet\bullet\circ$} \\
+      \textcolor{ForestGreen}{\faChartBar} & Data Dashboards         & \textcolor{BracketGray}{(ggplot2, Shiny, Plotly)}              & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+      \textcolor{ForestGreen}{\faBook}     & Reproducible Notebooks  & \textcolor{BracketGray}{(Jupyter, Quarto)}                     & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+      \textcolor{ForestGreen}{\faRProject} & R / Python / Bash       & \textcolor{BracketGray}{(advanced scripting, Sysadmin)}       & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
+      \textcolor{ForestGreen}{\faDatabase} & SQL / Data Governance   & \textcolor{BracketGray}{(PostgreSQL, FAIR)}                    & \SkillBull{$\bullet\bullet\bullet\circ\circ$} \\
     \end{tabular}
-    
-    \vfill\null \columnbreak
-    
-    \begin{tabular}{p{1em}p{8em}r}
-      \textcolor{ForestGreen}{\faStream}     & Snakemake           & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
-      \textcolor{ForestGreen}{\faCube}.      & Conda               & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
-      \textcolor{ForestGreen}{\faDatabase}   & SQL                 & \SkillBull{$\bullet\bullet\circ\circ\circ$} \\
-      \textcolor{ForestGreen}{\faRobot}      & Machine learning    & \SkillBull{$\bullet\bullet\bullet\bullet\circ$} \\
-      \textcolor{ForestGreen}{\faChartBar}   & Visualization       & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
-      \textcolor{ForestGreen}{\faBook}       & Code Notebooks      & \SkillBull{$\bullet\bullet\bullet\bullet\bullet$} \\
-    \end{tabular}
-  \end{multicols}
 \end{minipage}
 \hfill
 \noindent
@@ -335,7 +324,7 @@ All publications are listed at \href{https://lauradijkhuizen.com/science}{laurad
     \emph{ACS Synthetic Biology}. DOI: \href{https://doi.org/10.1021/acssynbio.3c00583}{10.1021/acssynbio.3c00583}
 
   \item \textbf{Arévalo, S.; Pérez Rico, D.; Abarca, D.; Dijkhuizen, L.W.; et al.} (2022-09-19)  
-    “Genome engineering by RNA-guided transposition for \textit{Anabaena} PCC 7120,” Preprint.  
+    “Genome engineering by RNA-guided transposition for \textit{Anabaena} PCC 7120,”
     DOI: \href{https://doi.org/10.1101/2022.09.18.508393}{10.1101/2022.09.18.508393}
 
   \item \textbf{Güngör, E.; Brouwer, P.; Dijkhuizen, L.W.; et al.} (2021-01)  
