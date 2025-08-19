@@ -6,6 +6,7 @@
 *.bbl
 *.blg
 *.fls
+*.xdv
 *.fdb_latexmk
 *.synctex.gz
 *.lof
