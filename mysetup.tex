@@ -10,11 +10,22 @@
 
 % Colors
 \usepackage{xcolor}
-\newcommand{\GreenHeading}[1]{\section*{\textcolor{ForestGreen}{#1}}}
+\newcommand{\GreenHeading}[1]{\section*{{\headerfont\textcolor{ForestGreen}{#1}}}}
 \newcommand{\GreenBold}[1]{\textbf{\textcolor{ForestGreen}{#1}}}
 
 % Hyperlinks
 \usepackage[hidelinks]{hyperref}
+
+% Fonts
+\usepackage{roboto}
+\usepackage[default,opentype]{sourcesanspro}
+
+% Font macros from Awesome CV
+\newcommand*{\headerfont}{\roboto}
+\newcommand*{\headerfontlight}{\robotolight}
+\newcommand*{\footerfont}{\sourcesanspro}
+\newcommand*{\bodyfont}{\sourcesanspro}
+\newcommand*{\bodyfontlight}{\sourcesansprolight}
 
 % FontAwesome icons (ensure you have the font installed)
 \usepackage{fontawesome5}
@@ -23,6 +34,8 @@
 % Spacing shortcuts
 \usepackage{setspace}
 \newcommand{\MySkip}{\vspace{0.5em}}
+
+\usepackage{enumitem}
 
 % Vertical rule between columns
 \newcommand{\MyVerticalRule}{\color{ForestGreen}\rule{1pt}{\textheight}}

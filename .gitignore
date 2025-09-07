@@ -28,6 +28,3 @@ Thumbs.db
 *.latexmkrc
 .texpadtmp
 .vscode/
-
-# Ignore job specific CVs that I keep with gitworktree
-job_CVs

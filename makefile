@@ -10,7 +10,7 @@ PDF := cv.pdf
 DEPENDENCIES := vars.tex mysetup.tex
 
 # Build with latexmk for automatic reruns
-LATEXMK := latexmk -interaction=nonstopmode -halt-on-error -pdf
+LATEXMK := latexmk -xelatex -interaction=nonstopmode -halt-on-error
 
 .PHONY: all clean
 
